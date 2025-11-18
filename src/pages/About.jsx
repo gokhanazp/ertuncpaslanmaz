@@ -59,9 +59,10 @@ const About = () => {
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden pt-24">
         {/* Background Image - Arka Plan Resmi */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url(https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/4-scaled.jpg)',
+            backgroundPosition: 'center 40%',
           }}
         ></div>
 

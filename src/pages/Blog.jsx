@@ -152,9 +152,10 @@ const Blog = () => {
       <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden pt-28 md:pt-32">
         {/* Background Image - Arka Plan Resmi */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url(https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/DJI_20250105132823_0027_D-kopyasi.jpeg)',
+            backgroundPosition: 'center 40%',
           }}
         ></div>
 

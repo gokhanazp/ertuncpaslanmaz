@@ -208,9 +208,10 @@ const ProductDetail = () => {
       <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden pt-28 md:pt-32">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url(${product.mainImage})`,
+            backgroundPosition: 'center 40%',
           }}
         ></div>
 
