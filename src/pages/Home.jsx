@@ -179,17 +179,17 @@ const Home = () => {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        <div className="container-custom relative z-10 py-20">
+        <div className="container-custom relative z-10 py-20 pt-28 md:pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Sol Taraf - İçerik - Left Side - Content */}
             <div className="text-white animate-fade-in">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
                 {language === 'tr' ? 'Paslanmaz Çelik Çözümlerinde' : 'Leader in Stainless Steel Solutions'}
                 <span className="block text-primary-300 mt-2">
                   {language === 'tr' ? 'Öncü Firma' : 'Innovation & Quality'}
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-gray-300 leading-relaxed">
                 {language === 'tr'
                   ? 'Endüstriyel paslanmaz çelik ekipman üretiminde 15 yılı aşkın deneyimimizle, kalite ve güvenilirliğin adresi.'
                   : 'With over 15 years of experience in industrial stainless steel equipment manufacturing, we are the address of quality and reliability.'

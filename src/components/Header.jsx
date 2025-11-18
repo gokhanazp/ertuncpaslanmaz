@@ -156,17 +156,19 @@ const Header = () => {
                   src="/logo-1.png"
                   alt="Ertunç Paslanmaz Logo"
                   className={`relative z-10 object-contain transition-all duration-500 ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-10 sm:h-12' : 'h-14 sm:h-16'
                   } w-auto group-hover:scale-105`}
                 />
               </div>
-              <div className={`transition-all duration-500 ${isScrolled ? 'hidden lg:block' : 'block'}`}>
+              <div className="transition-all duration-500">
                 <h1 className={`font-bold text-gray-900 leading-tight transition-all duration-500 ${
-                  isScrolled ? 'text-lg' : 'text-xl'
+                  isScrolled ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'
                 }`}>
                   Ertunç Paslanmaz
                 </h1>
-                <p className="text-xs text-primary-600 font-medium">
+                <p className={`text-xs text-primary-600 font-medium transition-all duration-500 ${
+                  isScrolled ? 'hidden sm:block' : 'block'
+                }`}>
                   {language === 'tr' ? 'Endüstriyel Çelik Çözümleri' : 'Industrial Steel Solutions'}
                 </p>
               </div>

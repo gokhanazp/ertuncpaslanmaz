@@ -1035,33 +1035,33 @@ const BlogPost = () => {
 
               {/* Share Buttons - Paylaş Butonları */}
               <div className="mt-12 pt-8 border-t-2 border-gray-200">
-                <div className="bg-gradient-to-br from-gray-50 to-primary-50/30 rounded-2xl p-8">
-                  <div className="flex items-center justify-between flex-wrap gap-6">
+                <div className="bg-gradient-to-br from-gray-50 to-primary-50/30 rounded-2xl p-6 sm:p-8">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
                         <Share2 size={24} className="text-white" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-gray-900 text-lg">
+                        <h4 className="font-bold text-gray-900 text-base sm:text-lg">
                           {language === 'tr' ? 'Bu yazıyı paylaş' : 'Share this article'}
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-xs sm:text-sm text-gray-600">
                           {language === 'tr' ? 'Sosyal medyada paylaşın' : 'Share on social media'}
                         </p>
                       </div>
                     </div>
-                    <div className="flex gap-3">
-                      <button className="group px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold flex items-center gap-2">
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                      <button className="group px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold flex items-center gap-2 text-sm sm:text-base">
                         <span>Facebook</span>
-                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </button>
-                      <button className="group px-6 py-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-xl hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold flex items-center gap-2">
+                      <button className="group px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-xl hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold flex items-center gap-2 text-sm sm:text-base">
                         <span>Twitter</span>
-                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </button>
-                      <button className="group px-6 py-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl hover:from-blue-800 hover:to-blue-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold flex items-center gap-2">
+                      <button className="group px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl hover:from-blue-800 hover:to-blue-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold flex items-center gap-2 text-sm sm:text-base">
                         <span>LinkedIn</span>
-                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </button>
                     </div>
                   </div>
