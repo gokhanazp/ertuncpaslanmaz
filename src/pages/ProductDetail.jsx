@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import SEO from '../components/SEO';
@@ -7,15 +7,51 @@ import SEO from '../components/SEO';
 /**
  * Ürün Detay Sayfası - Product Detail Page
  * Paslanmaz Tank ve diğer ürünler için detaylı bilgi sayfası
+ * SEO-friendly URL slugs that change with language
  */
 const ProductDetail = () => {
   const { slug } = useParams();
   const { language, t } = useLanguage();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // URL Slug Mapping - Türkçe ve İngilizce slug'lar
+  // Turkish and English URL slugs for SEO
+  const slugMapping = {
+    'paslanmaz-tank': {
+      tr: 'paslanmaz-tank',
+      en: 'stainless-steel-tank',
+      id: 'tanks'
+    },
+    'stainless-steel-tank': {
+      tr: 'paslanmaz-tank',
+      en: 'stainless-steel-tank',
+      id: 'tanks'
+    }
+  };
+
+  // Mevcut slug'dan ürün ID'sini bul - Find product ID from current slug
+  const currentProduct = slugMapping[slug];
+
+  // Dil değiştiğinde URL'yi güncelle - Update URL when language changes
+  useEffect(() => {
+    if (currentProduct) {
+      const correctSlug = currentProduct[language];
+      const basePath = language === 'tr' ? '/urunler' : '/products';
+      const correctPath = `${basePath}/${correctSlug}`;
+
+      // Eğer mevcut URL doğru değilse, yönlendir
+      // If current URL is not correct, redirect
+      if (location.pathname !== correctPath) {
+        navigate(correctPath, { replace: true });
+      }
+    }
+  }, [language, slug, currentProduct, navigate, location.pathname]);
 
   // Paslanmaz Tank İçeriği - Stainless Steel Tank Content
   const paslanmazTankContent = {
-    slug: 'paslanmaz-tank',
+    slugTr: 'paslanmaz-tank',
+    slugEn: 'stainless-steel-tank',
     title: language === 'tr' ? 'Paslanmaz Tank' : 'Stainless Steel Tank',
     mainImage: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/4-scaled.jpg',
     description: language === 'tr'
@@ -136,7 +172,7 @@ const ProductDetail = () => {
   };
 
   // Ürün bulunamadı kontrolü - Product not found check
-  if (slug !== 'paslanmaz-tank') {
+  if (!currentProduct) {
     return (
       <div className="min-h-screen flex items-center justify-center pt-24">
         <div className="text-center">

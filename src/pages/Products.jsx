@@ -258,7 +258,7 @@ const Products = () => {
                   {/* Detaylı Bilgi Butonu - Detailed Info Button (Sadece Paslanmaz Tank için) */}
                   {product.id === 'tanks' && (
                     <Link
-                      to={language === 'tr' ? '/urunler/paslanmaz-tank' : '/products/paslanmaz-tank'}
+                      to={language === 'tr' ? '/urunler/paslanmaz-tank' : '/products/stainless-steel-tank'}
                       className={`inline-flex items-center justify-center gap-3 w-full bg-gradient-to-r ${
                         index % 2 === 0
                           ? 'from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800'
