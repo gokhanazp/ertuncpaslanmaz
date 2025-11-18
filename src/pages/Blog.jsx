@@ -149,17 +149,17 @@ const Blog = () => {
       />
 
       {/* Page Header - Sayfa Başlığı */}
-      <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden pt-28 md:pt-32">
         {/* Background Image - Arka Plan Resmi */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070)',
+            backgroundImage: 'url(https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/DJI_20250105132823_0027_D-kopyasi.jpeg)',
           }}
         ></div>
-        
+
         {/* Dark Overlay - Koyu Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/75 to-black/80"></div>
         
         {/* Content - İçerik */}
         <div className="container-custom relative z-10 text-center text-white py-20">
