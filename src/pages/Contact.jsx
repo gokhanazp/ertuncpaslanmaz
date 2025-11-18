@@ -91,8 +91,8 @@ const Contact = () => {
         }
       />
 
-      {/* Hero Section - Header altında kalmayacak şekilde pt-24 */}
-      <section className="relative pt-24 pb-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white overflow-hidden">
+      {/* Hero Section - Header altında kalmayacak şekilde pt-32 */}
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white overflow-hidden">
         {/* Background Pattern - Arka Plan Deseni */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -111,7 +111,9 @@ const Contact = () => {
             {/* Quick Stats - Hızlı İstatistikler */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <Clock className="w-8 h-8 mx-auto mb-3 text-orange-400" />
+                <div className="w-8 h-8 mx-auto mb-3 text-orange-400 flex items-center justify-center">
+                  <Clock className="w-8 h-8" />
+                </div>
                 <p className="text-sm text-primary-100">
                   {language === 'tr' ? '24 Saat İçinde' : 'Within 24 Hours'}
                 </p>
@@ -120,7 +122,9 @@ const Contact = () => {
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <MessageCircle className="w-8 h-8 mx-auto mb-3 text-orange-400" />
+                <div className="w-8 h-8 mx-auto mb-3 text-orange-400 flex items-center justify-center">
+                  <MessageCircle className="w-8 h-8" />
+                </div>
                 <p className="text-sm text-primary-100">
                   {language === 'tr' ? 'Ücretsiz' : 'Free'}
                 </p>
@@ -129,7 +133,9 @@ const Contact = () => {
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <CheckCircle className="w-8 h-8 mx-auto mb-3 text-orange-400" />
+                <div className="w-8 h-8 mx-auto mb-3 text-orange-400 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8" />
+                </div>
                 <p className="text-sm text-primary-100">
                   {language === 'tr' ? 'Detaylı' : 'Detailed'}
                 </p>
