@@ -1,0 +1,5 @@
+Contact: mailto:info@ertuncpaslanmaz.com
+Contact: tel:+90-212-672-10-17
+Preferred-Languages: tr, en
+Canonical: https://ertuncpaslanmaz.com/.well-known/security.txt
+

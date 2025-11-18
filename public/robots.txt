@@ -1,0 +1,37 @@
+# robots.txt for Ertunç Paslanmaz
+# https://ertuncpaslanmaz.com/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /hakkimizda
+Allow: /about
+Allow: /urunler
+Allow: /products
+Allow: /blog
+Allow: /blog/*
+Allow: /iletisim
+Allow: /contact
+
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://ertuncpaslanmaz.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
