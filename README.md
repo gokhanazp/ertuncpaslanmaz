@@ -1,6 +1,6 @@
-# Ertunç Paslanmaz Web Sitesi
+# 🏭 Ertunç Paslanmaz Web Sitesi
 
-Modern, SEO uyumlu ve çok dilli React web sitesi.
+Modern, SEO uyumlu ve çok dilli React web sitesi. Paslanmaz mikser, paslanmaz stok tank, paslanmaz toz mikseri, depolama tankı ve hijyen ekipmanları üretimi.
 
 ## 🚀 Özellikler
 
@@ -8,10 +8,13 @@ Modern, SEO uyumlu ve çok dilli React web sitesi.
 - ✅ **Vite** - Hızlı geliştirme ve build
 - ✅ **Tailwind CSS** - Modern ve responsive tasarım
 - ✅ **Lucide React** - Yeni nesil modern ikonlar
-- ✅ **SEO Optimizasyonu** - React Helmet ile meta tags, Open Graph, Twitter Cards
+- ✅ **SEO Optimizasyonu** - React Helmet ile meta tags, Open Graph, Twitter Cards, Schema.org
 - ✅ **Çok Dilli Destek** - Türkçe ve İngilizce (kolay genişletilebilir)
+- ✅ **Çok Dilli URL'ler** - SEO-friendly URL yapısı (TR: /hakkimizda, EN: /about)
+- ✅ **Blog Sistemi** - SEO uyumlu blog yazıları ve detay sayfaları
 - ✅ **Responsive Tasarım** - Tüm cihazlarda mükemmel görünüm
 - ✅ **Modern UI/UX** - Kullanıcı dostu arayüz
+- ✅ **Sitemap & Robots.txt** - Arama motoru optimizasyonu
 
 ## 📁 Proje Yapısı
 
@@ -60,10 +63,21 @@ npm run preview
 
 ## 🌐 Sayfalar
 
-- **Anasayfa** (`/`) - Hero, Hizmetler ve Referanslar
-- **Hakkımızda** (`/about`) - Şirket bilgileri ve değerler
-- **Ürünler** (`/products`) - Ürün ve hizmet detayları
-- **İletişim** (`/contact`) - İletişim formu ve bilgileri
+- **Anasayfa** (`/`) - Hero, Hizmetler, Referanslar ve SSS
+- **Hakkımızda** (`/hakkimizda` | `/about`) - Şirket bilgileri ve değerler
+- **Ürünler** (`/urunler` | `/products`) - Ürün ve hizmet detayları
+- **Blog** (`/blog`) - Blog yazıları ve haberler
+- **Blog Detay** (`/blog/:slug`) - SEO uyumlu blog detay sayfaları
+- **İletişim** (`/iletisim` | `/contact`) - İletişim formu ve bilgileri
+
+### 📝 Blog Yazıları
+
+1. Paslanmaz Çelik Tankların Bakımı ve Temizliği
+2. Gıda Endüstrisinde Hijyen Standartları
+3. Mikser Sistemlerinde Verimlilik Artırma
+4. Paslanmaz Çelik Kalite Standartları
+5. Konveyör Sistemlerinde Otomasyon
+6. Yeni Fabrika Açılışımız
 
 ## 🌍 Çok Dilli Destek
 
@@ -119,7 +133,30 @@ colors: {
 - React Helmet Async 2.0.5
 - Lucide React 0.400.0
 
+## 🔍 SEO Özellikleri
+
+### Hedef Anahtar Kelimeler
+- Paslanmaz mikser
+- Paslanmaz stok tank
+- Paslanmaz toz mikseri
+- Depolama tankı
+- Paslanmaz proses
+- Paslanmaz hijyen ekipmanları
+
+### SEO Araçları
+- ✅ Meta tags (title, description, keywords)
+- ✅ Open Graph tags (Facebook, LinkedIn)
+- ✅ Twitter Cards
+- ✅ Schema.org structured data (Organization, LocalBusiness, Article)
+- ✅ Sitemap.xml
+- ✅ Robots.txt
+- ✅ Canonical URLs
+- ✅ Hreflang tags (çok dilli SEO)
+- ✅ SEO-friendly URLs
+
+Detaylı SEO rehberi için `SEO_GUIDE.md` dosyasına bakın.
+
 ## 📄 Lisans
 
-© 2024 Ertunç Paslanmaz. Tüm hakları saklıdır.
+© 2025 Ertunç Paslanmaz. Tüm hakları saklıdır.
 
