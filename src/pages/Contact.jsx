@@ -91,8 +91,8 @@ const Contact = () => {
         }
       />
 
-      {/* Hero Section - Header altında kalmayacak şekilde pt-32 */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white overflow-hidden">
+      {/* Hero Section - Header altında kalmayacak şekilde mt-20 pt-20 */}
+      <section className="relative mt-20 pt-20 pb-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white overflow-hidden">
         {/* Background Pattern - Arka Plan Deseni */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -111,8 +111,10 @@ const Contact = () => {
             {/* Quick Stats - Hızlı İstatistikler */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="w-8 h-8 mx-auto mb-3 text-orange-400 flex items-center justify-center">
-                  <Clock className="w-8 h-8" />
+                <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
                 <p className="text-sm text-primary-100">
                   {language === 'tr' ? '24 Saat İçinde' : 'Within 24 Hours'}
@@ -122,8 +124,10 @@ const Contact = () => {
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="w-8 h-8 mx-auto mb-3 text-orange-400 flex items-center justify-center">
-                  <MessageCircle className="w-8 h-8" />
+                <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
                 </div>
                 <p className="text-sm text-primary-100">
                   {language === 'tr' ? 'Ücretsiz' : 'Free'}
@@ -133,8 +137,10 @@ const Contact = () => {
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="w-8 h-8 mx-auto mb-3 text-orange-400 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8" />
+                <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
                 <p className="text-sm text-primary-100">
                   {language === 'tr' ? 'Detaylı' : 'Detailed'}
@@ -240,12 +246,16 @@ const Contact = () => {
                     <span className="text-lg">
                       {isSubmitting ? (language === 'tr' ? 'Gönderiliyor...' : 'Sending...') : t('contact.form.send')}
                     </span>
-                    <Send size={22} className="group-hover:translate-x-1 transition-transform" />
+                    <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
                   </button>
 
                   {submitMessage && (
                     <div className="p-5 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl text-green-800 flex items-start gap-3 animate-fade-in">
-                      <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
                       <p className="font-medium">{submitMessage}</p>
                     </div>
                   )}
@@ -257,39 +267,83 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Contact Cards - İletişim Kartları */}
               <div className="space-y-6">
-                {contactInfo.map((info, index) => {
-                  const Icon = info.icon;
-                  return (
-                    <a
-                      key={index}
-                      href={info.link}
-                      target={info.icon === MapPin ? '_blank' : undefined}
-                      rel={info.icon === MapPin ? 'noopener noreferrer' : undefined}
-                      className="group block bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-2 border-transparent hover:border-primary-500"
-                    >
-                      <div className="flex items-start gap-5">
-                        <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                          <Icon className="text-white" size={28} />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                            {info.title}
-                          </h3>
-                          <p className="text-gray-600 group-hover:text-gray-900 transition-colors leading-relaxed">
-                            {info.content}
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  );
-                })}
+                {/* Adres Kartı */}
+                <a
+                  href={contactInfo[0].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-2 border-transparent hover:border-primary-500"
+                >
+                  <div className="flex items-start gap-5">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                        {contactInfo[0].title}
+                      </h3>
+                      <p className="text-gray-600 group-hover:text-gray-900 transition-colors leading-relaxed">
+                        {contactInfo[0].content}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Telefon Kartı */}
+                <a
+                  href={contactInfo[1].link}
+                  className="group block bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-2 border-transparent hover:border-primary-500"
+                >
+                  <div className="flex items-start gap-5">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                        {contactInfo[1].title}
+                      </h3>
+                      <p className="text-gray-600 group-hover:text-gray-900 transition-colors leading-relaxed">
+                        {contactInfo[1].content}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Email Kartı */}
+                <a
+                  href={contactInfo[2].link}
+                  className="group block bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-2 border-transparent hover:border-primary-500"
+                >
+                  <div className="flex items-start gap-5">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                        {contactInfo[2].title}
+                      </h3>
+                      <p className="text-gray-600 group-hover:text-gray-900 transition-colors leading-relaxed">
+                        {contactInfo[2].content}
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
 
               {/* Working Hours - Çalışma Saatleri */}
               <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg p-8 border-2 border-orange-100">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center">
-                    <Clock className="text-white" size={24} />
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">
                     {language === 'tr' ? 'Çalışma Saatleri' : 'Working Hours'}

@@ -22,42 +22,42 @@ const Home = () => {
   const services = [
     {
       id: 'tanks',
-      icon: '/src/img/paslanmaz_tank-150x150.png',
+      icon: '/img/paslanmaz_tank-150x150.png',
       image: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/4-scaled.jpg',
       title: language === 'tr' ? 'Paslanmaz Tank' : 'Stainless Steel Tank',
       description: t('home.services.items.tanks.description')
     },
     {
       id: 'mixers',
-      icon: '/src/img/paslanmaz_mikser_karistirici_sistem-150x150.png',
+      icon: '/img/paslanmaz_mikser_karistirici_sistem-150x150.png',
       image: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/MikserTanki-scaled.jpg',
       title: language === 'tr' ? 'Paslanmaz Mikser ve Karıştırıcı Sistemleri' : 'Stainless Steel Mixer and Agitator Systems',
       description: t('home.services.items.mixers.description')
     },
     {
       id: 'process',
-      icon: '/src/img/paslanmaz_tank-150x150.png',
+      icon: '/img/paslanmaz_tank-150x150.png',
       image: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/PaslanmazIslemElemanlari-scaled.jpg',
       title: language === 'tr' ? 'Paslanmaz Proses Elemanları' : 'Stainless Steel Process Elements',
       description: t('home.services.items.process.description')
     },
     {
       id: 'conveyor',
-      icon: '/src/img/konveyor_sistem-150x150.png',
+      icon: '/img/konveyor_sistem-150x150.png',
       image: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/Konveyor.jpg',
       title: language === 'tr' ? 'Konveyör Sistemleri' : 'Conveyor Systems',
       description: t('home.services.items.conveyor.description')
     },
     {
       id: 'washing',
-      icon: '/src/img/paslanmaz_hijyen-150x150.png',
+      icon: '/img/paslanmaz_hijyen-150x150.png',
       image: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/2-scaled.jpg',
       title: language === 'tr' ? 'Paslanmaz Hijyen ve Yıkama Sistemleri' : 'Stainless Steel Hygiene and Washing Systems',
       description: t('home.services.items.washing.description')
     },
     {
       id: 'platforms',
-      icon: '/src/img/platform_merdiven-150x150.png',
+      icon: '/img/platform_merdiven-150x150.png',
       image: 'https://ertuncpaslanmaz.com/wp-content/uploads/2025/05/PaslanmazMerdivenVePlatform.jpg',
       title: language === 'tr' ? 'Platform ve Merdivenler' : 'Platforms and Stairs',
       description: t('home.services.items.platforms.description')
