@@ -169,7 +169,7 @@ const ProductDetail = () => {
       />
 
       {/* Hero Section - Ürün Başlığı */}
-      <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden pt-28 md:pt-32">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -182,10 +182,10 @@ const ProductDetail = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/75 to-black/80"></div>
 
         <div className="container-custom relative z-10 text-center text-white py-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             {product.title}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
             {language === 'tr'
               ? 'Endüstriyel Paslanmaz Çelik Tank Çözümleri'
               : 'Industrial Stainless Steel Tank Solutions'}
