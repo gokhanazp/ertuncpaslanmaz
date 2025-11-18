@@ -217,7 +217,7 @@ const Products = () => {
                   <p className="text-gray-700 text-lg mb-8 leading-relaxed">{product.description}</p>
 
                   {/* Özellikler - Features */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg mb-6">
                     <h3 className="font-bold text-lg text-gray-900 flex items-center gap-2 mb-4">
                       <div className={`w-2 h-2 rounded-full ${
                         index % 2 === 0 ? 'bg-primary-600' : 'bg-orange-500'
@@ -254,6 +254,21 @@ const Products = () => {
                       ))}
                     </ul>
                   </div>
+
+                  {/* Detaylı Bilgi Butonu - Detailed Info Button (Sadece Paslanmaz Tank için) */}
+                  {product.id === 'tanks' && (
+                    <Link
+                      to={language === 'tr' ? '/urunler/paslanmaz-tank' : '/products/paslanmaz-tank'}
+                      className={`inline-flex items-center justify-center gap-3 w-full bg-gradient-to-r ${
+                        index % 2 === 0
+                          ? 'from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800'
+                          : 'from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700'
+                      } text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group`}
+                    >
+                      <span>{language === 'tr' ? 'Detaylı Bilgi' : 'Detailed Information'}</span>
+                      <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
